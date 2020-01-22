@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ recipe.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="editRecipe(recipe.id)">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+      <ion-button (click)="deleteRecipe(recipe.id)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="recipe.img"></ion-img>
+  <ion-title class="ion-padding ion-text-center">{{ recipe.name }}</ion-title>
+  <ion-list>
+    <ion-item *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</ion-item>
+  </ion-list>
+</ion-content>

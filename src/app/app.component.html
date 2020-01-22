@@ -1,0 +1,22 @@
+<ion-app>
+  <ion-menu side="start" menuId="first">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/recipes']">
+            <ion-icon slot="start" name="list"></ion-icon>Recipes
+          </ion-item>
+          <ion-item [routerLink]="['/recipes/create']">
+            <ion-icon slot="start" name="add-circle"></ion-icon>Add recipe
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>
